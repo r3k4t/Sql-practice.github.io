@@ -1,0 +1,7 @@
+ #Is there any sales representative (sales_reps) who is not assigned to any company?
+
+SELECT DISTINCT sales_rep_id 
+FROM accounts;
+
+SELECT id 
+FROM sales_reps;

@@ -1,0 +1,9 @@
+# Remove one column from table
+
+ALTER TABLE accounts
+DROP website;
+
+
+# Remove accounts table
+
+DROP TABLE accounts;

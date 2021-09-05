@@ -1,0 +1,8 @@
+What is the average total order and average total amount usd spent for each order?
+
+Solution Code:
+
+SELECT 
+AVG(total) total,
+AVG(total_amt_usd) usd
+FROM orders;

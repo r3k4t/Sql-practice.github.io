@@ -1,0 +1,7 @@
+ Write a query to return name, website and primary point of contact (primary_poc) of the account “General Motors”
+
+Solution Code:
+
+SELECT name, website, primary_poc
+FROM accounts
+WHERE name = ‘General Motors’;

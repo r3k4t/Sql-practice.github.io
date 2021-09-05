@@ -1,0 +1,2 @@
+DELETE FROM orders
+WHERE (poster_qty = 0 and id <> 0)

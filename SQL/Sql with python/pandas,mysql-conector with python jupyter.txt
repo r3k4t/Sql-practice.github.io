@@ -1,0 +1,22 @@
+#Bultin module ==>mysql.connector,pandas
+
+import mysql.connector
+import pandas as pd
+
+pd.set_option("display.max_rows",None)
+
+
+db = mysql.connector.connector(
+     
+     host = "127.0.0.1",
+     port = "8080";
+     user = "root";
+     password = " ";
+     database = "pnp"
+
+)
+ 
+
+print(db)
+
+

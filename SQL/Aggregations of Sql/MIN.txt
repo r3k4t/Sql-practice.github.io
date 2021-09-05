@@ -1,0 +1,7 @@
+When has the earliest order occurred?
+
+Solution Code:
+
+SELECT 
+MIN(occurred_at)
+FROM orders;

@@ -1,0 +1,14 @@
+ Write a query to return the name of each region for every order, the account name and the unit price they paid (total_amt_usd/total) for the order. Only return the results if the standard order quantity exceeds 500 and the poster order or gloss order quantity exceeds 1000. Your final table should have 3 columns: region name, account name, and unit price. Sort by unit price from highest to lowest.
+
+Solution Code:
+
+SELECT r.name region, a.name account, o.total_amt_usd/(o.total + 0.01) unit_price
+FROM region r
+JOIN sales_reps s
+ON s.region_id = r.id
+JOIN accounts a
+ON a.sales_rep_id = s.id
+JOIN orders o
+ON o.account_id = a.id
+WHERE o.standard_qty > 500 AND (o.poster_qty > 1000 OR o.gloss_qty > 1000)
+ORDER BY unit_price DESC;

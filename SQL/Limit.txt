@@ -1,0 +1,5 @@
+# Write a query to return account id (account_id), time of occurrence (occurred_at) and event channel (channel) from web_events table and limit the output to first 10 rows.
+
+SELECT account_id, occurred_at, channel 
+FROM web_events
+LIMIT 10;

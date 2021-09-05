@@ -1,0 +1,11 @@
+ Write a query to return the account names and order amounts where total order quantity is greater than 50000. Your table should have two columns: account name, total order quantity
+
+Solution Code:
+
+SELECT a.name,
+SUM(o.total) total_qty
+FROM orders o
+JOIN accounts a
+ON o.account_id = a.id
+GROUP BY a.name
+HAVING SUM(o.total) >= 50000;

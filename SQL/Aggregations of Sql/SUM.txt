@@ -1,0 +1,7 @@
+Write a query find out the total dollar spent on all papers from orders table.
+
+Solution Code:
+
+SELECT 
+SUM(total_amt_usd) Total_Spent
+FROM orders;

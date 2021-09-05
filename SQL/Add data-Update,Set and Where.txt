@@ -1,0 +1,4 @@
+
+UPDATE region
+SET name = "mid"
+WHERE ( name = "Midwest" and id <> 0);

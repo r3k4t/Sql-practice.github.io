@@ -1,0 +1,7 @@
+What is the maximum amount of order? [total from orders table]
+
+Solution Code:
+
+SELECT 
+MAX(total)
+FROM orders;

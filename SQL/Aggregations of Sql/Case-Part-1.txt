@@ -1,0 +1,17 @@
+Create a separate column that divides the gloss_amt_usd by the gloss_qty to find the unit price for gloss paper for each order. Return only the first 10 orders, and they should also include the id and account_id columns.
+
+Solution Code:
+
+SELECT id, account_id, gloss_amt_usd/gloss_qty AS gloss_unit_price
+FROM orders
+LIMIT 10;
+
+
+The above code will return error. Correct approach is below:
+
+
+SELECT id, account_id,
+            CASE WHEN gloss_qty = 0 OR gloss_qty IS NULL THEN 0
+            ELSE gloss_amt_usd/gloss_qty END AS gloss_unit_price
+FROM orders
+LIMIT 10;

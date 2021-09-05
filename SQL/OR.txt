@@ -1,0 +1,7 @@
+Write a query to return the list of orders that have poster or glossy order of over 5000. (poster_qty, gloss_qty)
+
+Solution Code:
+
+SELECT *
+FROM orders
+WHERE poster_qty > 5000 OR gloss_qty > 5000;

@@ -1,0 +1,9 @@
+Write a query that returns all rows from orders table that have total poster paper order worth equal or more than 250. (use poster_amt_usd column) Then arrange them from highest to lowest and return first 25 rows.
+
+Solution Code:
+
+SELECT *
+FROM orders
+WHERE poster_amt_usd >= 500
+ORDER BY poster_amt_usd DESC
+LIMIT 25;

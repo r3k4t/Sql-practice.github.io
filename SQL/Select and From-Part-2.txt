@@ -1,0 +1,3 @@
+#Write a query to return account id (id), name and primary point of contact (primary_poc) from accounts table.
+
+SELECT id, name, primary_poc FROM accounts;

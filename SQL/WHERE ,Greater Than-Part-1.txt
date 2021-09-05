@@ -1,0 +1,7 @@
+Write a query that returns all rows from orders table that have total dollar amount (total_amt_usd) greater than 2000
+
+Solution Code: 
+
+SELECT *
+FROM orders
+WHERE total_amt_usd > 2000;

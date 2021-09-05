@@ -1,0 +1,7 @@
+ Return all company names (name) from accounts table that starts with ‘a’
+
+Solution Code:
+
+SELECT name
+FROM accounts
+WHERE name LIKE 'a%';

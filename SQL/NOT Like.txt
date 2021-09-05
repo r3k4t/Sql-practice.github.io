@@ -1,0 +1,7 @@
+Find out websites (website) from accounts table that do not end with '.com'
+
+Solution Code:
+
+SELECT website
+FROM accounts
+WHERE website NOT Like '%.com';

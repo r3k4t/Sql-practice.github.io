@@ -1,0 +1,10 @@
+Write a query to find out the number of times a channel was used in the web_events table for each account. Your final result should contain three columns: account name, channel and number of events. Arrange your results by account name (A-Z) and then highest to lowest number of events.
+
+Solution Code:
+
+SELECT a.name, w.channel, COUNT(w.id) event_count
+FROM web_events w
+JOIN accounts a
+ON a.id = w.account_id
+GROUP BY a.name, w.channel
+ORDER BY a.name, event_count DESC;

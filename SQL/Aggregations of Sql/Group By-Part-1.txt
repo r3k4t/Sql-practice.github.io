@@ -1,0 +1,17 @@
+Find out total quantity (total) and total usd spent (total_amt_usd) in all orders for each account id form orders table.
+
+Group By will always after ‘where’ and before ‘order by’ clause.
+
+Solution Code:
+
+SELECT account_id,
+SUM(total) total,
+SUM(total_amt_usd) total_amt_usd
+FROM orders
+GROUP BY account_id;
+
+
+
+
+
+

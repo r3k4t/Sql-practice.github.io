@@ -1,0 +1,9 @@
+Write a query to find out the orders from orders table that are associated with the account “General Motors” from accounts table. Return order id (id), time of order (occurred_at), total order quantity (total), total dollar amount (total_amt_usd) from orders table and primary point of contact (primary_poc) from accounts table.
+
+Solution Code
+
+SELECT o.id, o.occurred_at, o.total, o.total_amt_usd, a.primary_poc
+FROM orders o
+JOIN accounts a
+ON o.account_id = a.id
+WHERE a.name = 'General Motors';

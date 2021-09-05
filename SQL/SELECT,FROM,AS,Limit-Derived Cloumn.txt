@@ -1,0 +1,7 @@
+ Write a query to return account id (account_id), occurrence time (occurred_at) and unit price of standard paper for each order [Divide standard paper order in dollar amount (gloss_amt_usd) by standard paper order quantity (standard_qty)]. Return only 5 rows.
+
+Solution Code:
+
+SELECT account_id, occurred_at, standard_amt_usd/standard_qty AS std_unit_price
+FROM orders
+LIMIT 5;

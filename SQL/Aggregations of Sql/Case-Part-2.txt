@@ -1,0 +1,17 @@
+Categorize the total_amt_usd into three groups below 2500, over 2500 and over 5000 and return how many orders were there in each category.
+
+Solution Code:
+
+SELECT
+
+            CASE WHEN total_amt_usd < 2500 THEN 'less than 2500'
+            WHEN total_amt_usd BETWEEN 2500 AND 5000 THEN 'more than 2500'
+            WHEN total_amt_usd > 5000 THEN 'more than 5000' END AS sales_group,
+            COUNT(*) AS counts
+
+FROM orders
+GROUP BY
+
+(CASE WHEN total_amt_usd < 2500 THEN 'less than 2500'
+            WHEN total_amt_usd BETWEEN 2500 AND 5000 THEN 'more than 2500'
+            WHEN total_amt_usd > 5000 THEN 'more than 5000' END);

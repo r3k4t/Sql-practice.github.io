@@ -1,0 +1,7 @@
+ Filter out the rows in order table that have total order quantity from 2500 to 5000
+
+Solution Code:
+
+SELECT *
+FROM orders
+WHERE total between  2500 and 5000;

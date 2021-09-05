@@ -1,0 +1,7 @@
+# Write a Query to return account id (account_id), time of occurrence (occurred_at) and channel of event (channel) from earliest 20 web events (web_events)
+
+
+SELECT account_id, occurred_at, channel
+FROM web_events
+ORDER BY occurred_at
+LIMIT 20;

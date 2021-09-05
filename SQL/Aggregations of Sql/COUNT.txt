@@ -1,0 +1,12 @@
+Is there any company with no primary point of contact (primary_poc) in the accounts table
+
+Solution Code
+
+SELECT
+COUNT()
+FROM accounts;
+
+SELECT
+COUNT(DISTINCT(primary_poc))
+FROM accounts;
+

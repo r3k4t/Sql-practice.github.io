@@ -1,0 +1,27 @@
+Find the average number of events for each channel per day from web_events table
+
+IBM DB2 Code:
+
+SELECT channel,
+            AVG(event_count) as avg_event_count
+FROM
+(SELECT DATE_TRUNC(‘day’, occurred_at) as day, channel,
+        COUNT(*) as event_count
+     FROM web_events
+     GROUP BY DATE_TRUNC(‘day’, occurred_at), channel
+     ORDER BY DATE_TRUNC(‘day’, occurred_at)) t1
+GROUP BY channel;
+
+
+
+MySqL Code:
+
+SELECT channel,
+            AVG(event_count) as avg_event_count
+FROM
+(SELECT TRUNCATE(occurred_at,'DD') as day, channel,
+        COUNT(*) as event_count
+     FROM web_events
+     GROUP BY TRUNCATE(occurred_at,'DD'), channel
+     ORDER BY TRUNCATE(occurred_at,'DD')) t1
+GROUP BY channel;

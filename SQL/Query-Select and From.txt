@@ -1,0 +1,10 @@
+# Write a statement to return all the columns from accounts table.
+
+
+SELECT * FROM  accounts;
+
+
+# alternative technique
+
+
+SELECT * FROM `accounts` WHERE 1

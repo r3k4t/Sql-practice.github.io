@@ -1,0 +1,7 @@
+Find out rows containing order id (id), account id (account_id) and time of ocurances (occurred_at) from orders table that have no poster order (poster_qty) but total order (total) of over 1000.
+
+Solution Code:
+
+SELECT id, account_id, occurred_at
+FROM orders
+WHERE poster_qty = 0 AND total > 1000;
